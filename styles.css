@@ -27,16 +27,17 @@ header {
 
 
 .nav {
-    width: 500px;
+    
     height: 20px;
-    position: relative;
-    right: 30px;
+}
+
+.menu{
+    display: none
 }
 
 ul {
     display: flex;
     list-style: none;
-    width: 350px;
     gap: 28px;
     
 }
@@ -48,7 +49,7 @@ ul {
         
 }
 
-li{
+.linav{
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
     font-weight: lighter;
@@ -56,7 +57,7 @@ li{
 
 }
 
-li:hover{
+.linav:hover{
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
     color: #a9827d;
@@ -86,7 +87,7 @@ li:hover{
     flex-direction: column;
 }
 
-.titulo{
+.title{
     padding: 20px;
     width: 100%;
     height: 100%;
@@ -171,7 +172,6 @@ h4{
 
 
 p{
-    width: 100%;
     color: white;
     font-family: 'Raleway', sans-serif;
     text-align: justify;
@@ -185,7 +185,7 @@ p{
 
 .ver-mas {
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
+    font-size: clamp(1rem, 1.5vw, 1rem);
     width: 15%;
     border-radius: 15px;
     border: none;
@@ -241,7 +241,7 @@ h5{
     border-radius: 40px;
     width: 20vw;
     height: 45vh;
-    background-color: rgb(34 18 18 / 46%);
+    background-color: rgb(34 18 18 / 77%);
     backdrop-filter: blur(4px);
     padding: 15px;
     display: flex;
@@ -294,6 +294,7 @@ h6{
     font-weight: bolder;
     text-align: center;
     font-size: 20px;
+    
 }
 
 .btnBnf{
@@ -319,8 +320,8 @@ h6{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #FFDEE9;
-    background-image: linear-gradient(86deg, #ffdee9ed 0%, #b5fffcd9 100%);
+    background-color: #000000;
+    background-image: linear-gradient(68deg, #610b28ed 0%, #0c5b58d9 100%);
     gap: 20px;
 }
 
@@ -365,6 +366,7 @@ h3 a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
    
 }
 
@@ -378,6 +380,7 @@ h3 a:hover{
     align-items: center;
     text-shadow: 1px 2px 3px black;
     padding: 20px;
+    z-index: 2;
     
 
 }
@@ -414,4 +417,255 @@ h3 a:hover{
     background-size: auto 120%;
     filter: drop-shadow(2px 4px 6px black);
     
+}
+
+#ghost{
+    position: absolute;
+    background-color: #00000075;
+    width: 100%;
+    height: 100%;
+    z-index: 2;  
+}
+
+
+#ghost:hover{
+    background-color: transparent;
+}
+
+/* Comienza seccion 5 our clients */
+
+.ourclients::after{
+    content: "";
+    position: absolute;
+    background-color: #00000054;
+    width: 100%;
+    height: 100%;
+     
+}
+
+.ourclients{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-image: url(https://images.unsplash.com/photo-1485248803654-ff245e4ec08c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1033&q=80);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+  
+}
+
+.textclients{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 50px;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: space-around;
+    z-index: 2;
+
+}
+
+.textclients > p {
+    color: white;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.container-clients{
+    display: flex;
+    height: 40%;
+    justify-content: space-evenly;
+    z-index: 2;
+    
+}
+
+.client{
+    position: relative;
+   
+}
+
+.client:hover::before{
+    
+    content: "VISITAR";
+    color: black;
+    width: 100px;
+    height: 17px;
+    background-color: yellow;
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 4px 4px 6px black;
+    font-family:'Montserrat', sans-serif;
+    
+    
+      
+}
+
+.img-clients{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+/* Comienza seccion 6 contact us */
+
+.contact{
+    background-image: url(https://images.unsplash.com/photo-1510027580951-31747e2371a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.contact::after{
+    content: "";
+    position: absolute;
+    background-color: #17010185;
+    width: 100%;
+    height: 100%;
+}
+
+.zindex{
+    z-index: 2;
+    padding: 20px;
+}
+
+.data{
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data > p{
+    color: white;
+    text-transform: uppercase;
+    font-size: clamp(0.5rem, 60px, 2.5rem);
+    font-weight: bolder;
+}
+
+.data > ul{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+
+
+.contact-us > li{
+    color: white;
+    font-size: clamp(0.5rem, 20px, 1.5rem);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+footer{
+    background-image: url(fondo.jpg);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+form > select{
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: rgb(90, 3, 90);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* medias queries */
+
+@media screen and (max-width: 576px){
+
+    header{
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav{
+        display: none;    
+    }
+
+    .menu{
+        display: block;
+        background-color: #e0e415;
+        width: 50px;
+        height: 50px;
+    }
+
+    li{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    ul{
+        gap: 10px;
+    }
+
+    .hero{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    h3{
+        font-size: 45px;
+        position: unset;
+    }
+
+    .info{
+        width: 100%;
+        gap: 0;
+        padding: 20px;
+        justify-content: flex-start;
+    }
+
+    .aboutspa{
+        width: 65%;
+    }
+
+    p{
+        line-height: 20px;
+    }
+
+    .ver-mas{
+        width: 40%;
+    }
+
+    .container-cards{
+        padding: 10px;
+    }
 }
