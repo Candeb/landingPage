@@ -460,10 +460,8 @@ h3 a:hover{
 .textclients{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     padding: 50px;
     align-items: center;
-    /* text-align: center; */
     justify-content: space-around;
     z-index: 2;
 
