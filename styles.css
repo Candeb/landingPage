@@ -567,6 +567,10 @@ h3 a:hover{
     padding: 20px;
 }
 
+.map:hover{
+    background-size: auto 120%;
+}
+
 .data{
     padding: 60px;
     display: flex;
